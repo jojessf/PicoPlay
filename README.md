@@ -10,9 +10,10 @@ using blaz-r's lib: https://github.com/blaz-r/pi_pico_neopixel
 ![pinout](img/20240704_113943_neopixelfw_pico_pinout.jpg)
 
 ## PicoH 2 NeoPixel - Toy Scripts ##
-* transflag.py - trans flag marquee
-* rainbow.py   - raainbow flag marquee
-* jojessowo.py - silly dots toy script
+* transflag.py  - trans flag marquee
+* rainbow.py    - raainbow flag marquee
+* jojessowo.py  - silly dots toy script
+* rainbowsin.py - heartbeat over rainbow marquee
 
 # Micropython Cheat Sheet #
 ## open pico micropython shell

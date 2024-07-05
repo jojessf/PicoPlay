@@ -55,6 +55,6 @@ r* 220 ohm resistor
 # LICENSE # 
 * Anyone who uses this must awoo :3
 * This project is available under the terms of [GPL 3.0](https://www.gnu.org/licenses/gpl-3.0) as described in [LICENSE](LICENSE)
+   * [License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)
 * The included [neopixel.py](https://github.com/blaz-r/pi_pico_neopixel) library is Copyright (c) 2021 blaz-r and distributed under [the MIT License](https://opensource.org/licenses/MIT) as described in [LICENSE_MIT](LICENSE_MIT)
- [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+   * [License: MIT](https://opensource.org/licenses/MIT)

@@ -1,7 +1,7 @@
 # Novice pico time w/ Jojess #
 
 * I decided to make a music visualizer for my C64's PCM5102 DAC using a NeoPixel Featherwing and a Raspberry Pico.  It was easy!  ^///^
-* Using [blaz-r's extended ws2812b lib](https://github.com/blaz-r/pi_pico_neopixel), which itself is based on [benevpi's](https://github.com/benevpi/pico_python_ws2812b) work.
+* Using [blaz-r's extended ws2812b lib](https://github.com/blaz-r/pi_pico_neopixel), which builds on [benevpi's](https://github.com/benevpi/pico_python_ws2812b) work.
 
 * Please let me know what I'm doing wrong.  It does work tho.  <w< 
 

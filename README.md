@@ -1,23 +1,44 @@
 # Novice pico time w/ Jojess #
 
-using blaz-r's lib: https://github.com/blaz-r/pi_pico_neopixel
+* I decided to make a music visualizer for my C64's PCM5102 DAC using a NeoPixel Featherwing and a Raspberry Pico.  It was easy!  ^///^
+* Using [blaz-r's extended ws2812b lib](https://github.com/blaz-r/pi_pico_neopixel), which itself is based on [benevpi's](https://github.com/benevpi/pico_python_ws2812b) work.
+
+* Please let me know what I'm doing wrong.  It does work tho.  <w< 
+
+## Hardware list ##
+* Raspberry Pico H 
+* PCM5102A
+* NeoPixel FeatherWing
+* 2-3 x 360/400 pin breadboards
+* 220 ohm resistor [maybe a good idea?]
+* 10k ohm resistor [is this right?]
+r* 220 ohm resistor 
+* 6-7 wires ;p
 
 
 ## PicoH 2 NeoPixel - Pinout ##
-* pico H 01         => resistor => neopixel_featherwing {DIN}
+* pico H 01         => 220 ohm =>  IN4007 DIODE => neopixel_featherwing {DIN}
 * pico H 40/VBUS/5v => neopixel_featherwing {VUSB}
-* pico H 23/GND     => neopixel_featherwing {GND/dataGRNRef}
+* pico H 23/GND     <=> neopixel_featherwing {GND/dataGRNRef}
 ![pinout](img/20240704_113943_neopixelfw_pico_pinout.jpg)
+
+
+## PicoH 2 DAC - Pinin ##
+* pico H 33 <============> PCM5102A DAC {GND}
+* pico H 34 <= 10k ohm <= PCM5102A DAC {R}
+![pinout](img/202407042300_DAC2PICO_PINS.jpg)
+![pinout](img/202407042300_PICO2DAC_PINS.jpg)
+![pinout](img/202407042300_PICO+DAC_FULL.jpg)
+
+## PicoH 2 NeoPixel - Cool Scripts ##
+* pixldac.py
 
 ## PicoH 2 NeoPixel - Toy Scripts ##
 * transflag.py  - trans flag marquee
 * rainbow.py    - raainbow flag marquee
 * jojessowo.py  - silly dots toy script
 * rainbowsin.py - heartbeat over rainbow marquee
-
-# Micropython Cheat Sheet #
-## open pico micropython shell
-* `mpremote`
+* pintestanalog2digital.py - read analog audio for an "oscilloscope", print val to STDOUT
 
 ## Pico H File System ##
 * `mpremote fs`
@@ -25,9 +46,9 @@ using blaz-r's lib: https://github.com/blaz-r/pi_pico_neopixel
    * `mpremote fs rm :remotefile`
    * `mpremote cp localfile :remotefile`
 
-## TODO ##
-* basics 
-** read up on autobooting scripts
-** sin wave demo 
-** data-in from PCM5102A DAC
-* !!! basic-$!^@# music visualizer for C64 !!!  :3
+# LICENSE # 
+* Anyone who uses this must awoo :3
+* This project is available under the terms of [GPL 3.0](https://www.gnu.org/licenses/gpl-3.0) as described in [LICENSE](LICENSE)
+* The included [neopixel.py](https://github.com/blaz-r/pi_pico_neopixel) library is Copyright (c) 2021 blaz-r and distributed under [the MIT License](https://opensource.org/licenses/MIT) as described in [LICENSE_MIT](LICENSE_MIT)
+ [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

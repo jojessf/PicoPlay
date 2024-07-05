@@ -22,7 +22,8 @@ r* 220 ohm resistor
 ![pixldac](img/202407050000_PixlDac.jpg)
 
 ## PicoH 2 NeoPixel - Pinout ##
-* pico H 01         => 220 ohm =>  IN4007 DIODE => neopixel_featherwing {DIN}
+* pico H 1/GP0         => 220 ohm => neopixel_featherwing {DIN}
+   * can I use a diode or something here, to minimize any impact it might have on the audio line?  Is the resistor sufficent?
 * pico H 40/VBUS/5v => neopixel_featherwing {VUSB}
 * pico H 23/GND     <=> neopixel_featherwing {GND/dataGRNRef}
 
@@ -30,8 +31,8 @@ r* 220 ohm resistor
 
 
 ## PicoH 2 DAC - Pinin ##
-* pico H 33 <============> PCM5102A DAC {GND}
-* pico H 34 <= 10k ohm <= PCM5102A DAC {R}
+* pico H 33/GND/AGND <============> PCM5102A DAC {GND}
+* pico H 34/ADC2/GP28 <= 10k ohm <= PCM5102A DAC {R}
 
 ![dac2pico pins](img/202407042300_DAC2PICO_PINS.jpg)
 
